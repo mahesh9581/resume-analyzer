@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "/api" });
+const API = axios.create({ 
+  baseURL: "https://resume-analyzer-2-sbn4.onrender.com/api" 
+});
 
-// Analyze resume from file upload
 export async function analyzeFile(file, jobDesc = "") {
   const form = new FormData();
   form.append("resume", file);
@@ -13,7 +14,6 @@ export async function analyzeFile(file, jobDesc = "") {
   return data.analysis;
 }
 
-// Analyze resume from pasted text
 export async function analyzeText(resumeText, jobDesc = "") {
   const { data } = await API.post("/analyze/text", { resumeText, jobDesc });
   return data.analysis;
