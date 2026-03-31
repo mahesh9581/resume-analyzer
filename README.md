@@ -3,6 +3,7 @@
 Full-stack AI Resume Analyzer using React + Node.js + Express
 
 ---
+url:https://cozy-lollipop-7bb66c.netlify.app/
 
 ## 🚀 Setup & Run
 
